@@ -2,4 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true" android:color="@color/bright_yellow" />
     <item android:color="@color/dark_text" />
+
+    <!-- Memberi warna background putih solid -->
+    <solid android:color="@color/white" />
+
+    <!-- Bagian terpenting: membuat sudut atas melengkung -->
+    <corners
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
+
 </selector>

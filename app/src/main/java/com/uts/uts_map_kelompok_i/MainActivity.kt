@@ -52,4 +52,18 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.fragment_container, fragment)
             .commit()
     }
+
+    fun navigateToCreatePost() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, CreatePostBottomSheetFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun navigateToEditPost(partnerId: String) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, EditPostBottomSheetFragment.newInstance(partnerId))
+            .addToBackStack(null)
+            .commit()
+    }
 }

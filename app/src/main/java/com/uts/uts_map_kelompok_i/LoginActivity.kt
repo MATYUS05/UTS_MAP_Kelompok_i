@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 
@@ -17,6 +18,11 @@ class LoginActivity : AppCompatActivity() {
         val etPassword = findViewById<EditText>(R.id.et_password)
         val btnLogin = findViewById<Button>(R.id.btn_login)
         val tvGoToRegister = findViewById<TextView>(R.id.tv_go_to_register)
+        val btnBack = findViewById<ImageButton>(R.id.btn_back)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnLogin.setOnClickListener {
             val emailInput = etEmail.text.toString()
@@ -32,7 +38,6 @@ class LoginActivity : AppCompatActivity() {
             val savedPassword = sharedPreferences.getString("USER_PASSWORD", "123456")
 
             if (emailInput == savedEmail && passwordInput == savedPassword) {
-     
                 val editor = sharedPreferences.edit()
                 editor.putBoolean("IS_LOGGED_IN", true)
                 editor.apply()

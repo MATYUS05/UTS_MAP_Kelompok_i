@@ -4,25 +4,27 @@ package com.uts.uts_map_kelompok_i
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.widget.Button
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        val btnGetStarted: Button = findViewById(R.id.btn_get_started)
+
+        btnGetStarted.setOnClickListener {
             val sharedPreferences = getSharedPreferences("FitMatePrefs", MODE_PRIVATE)
             val isLoggedIn = sharedPreferences.getBoolean("IS_LOGGED_IN", false)
 
             if (isLoggedIn) {
-                startActivity(Intent(this, MainActivity::class.java))
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
-                startActivity(Intent(this, LoginActivity::class.java))
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
-
-            finish()
-        }, 2000)
+        }
     }
 }

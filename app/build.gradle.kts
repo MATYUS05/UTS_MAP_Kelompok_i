@@ -26,6 +26,10 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -36,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation("com.airbnb.android:lottie:6.4.0")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.fragment:fragment-ktx:1.7.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
