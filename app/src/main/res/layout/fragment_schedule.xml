@@ -1,16 +1,578 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jadwal Olahraga"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_font_family"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Calendar Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalender Mingguan"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_font_family"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Week Days Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sen"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sel"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rab"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kam"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jum"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sab"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Min"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_font_family"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp" />
+
+            </LinearLayout>
+
+            <!-- Schedule Content Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Monday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏋‍♂ Gym"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="08:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Tuesday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏃‍♀ Jogging"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="17:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Wednesday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🧘 Yoga"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="19:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Thursday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏋‍♂ Gym"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="08:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Friday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏃‍♀ Jogging"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="17:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Saturday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🧘 Yoga"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="19:00"
+                        android:textSize="9sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Sunday -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@color/light_gray"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Libur"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:gravity="center"
+                        android:padding="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Today's Schedule Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jadwal Hari Ini"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_font_family"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Gym Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/gym"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Gym"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏋‍♂ Gym"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08:00 – 09:30"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi: Gym Center"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Jogging Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/jogging"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Jogging"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏃‍♀ Jogging"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_font_family" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17:00 – 17:45"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi: Taman Kota"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Yoga Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/yoga"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Yoga"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Halaman Jadwal Olahraga"
-        android:textSize="22sp"
+                        android:text="🧘 Yoga"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_font_family"/>
+                        android:fontFamily="@font/poppins_font_family" />
 
-</FrameLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19:00 – 19:30"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi: Studio Yoga"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/poppins_font_family"
+                        android:layout_marginTop="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Add Schedule Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Jadwal"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_font_family"
+            android:backgroundTint="@color/bright_yellow"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            app:cornerRadius="12dp"
+            app:elevation="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>
