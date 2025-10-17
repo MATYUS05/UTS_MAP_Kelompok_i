@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_stats -> {
-                replaceFragment(StatsFragment())
+                replaceFragment(StatisticFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile -> {
